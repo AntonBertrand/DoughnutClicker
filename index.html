@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Doughnut Clicker Game</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <h1>Doughnut Clicker</h1>
+        <p id="instructions">Click the Doughnut to earn points! One Doughnut earned per click.</p>
+        <div id="imgDiv">
+            <img src="doughnutImg.png" id="doughnutImg" width="20%" alt="doughnut Image" style="margin: 2%;" onclick="adddoughnut()">
+        </div>
+
+        <div id="shopInterface" style="display: none;"> 
+            <div class="grid" id="shopGrid">
+                <div><img src="traineeBaker.png" id="printer1" alt="" onclick="printer1()"></div>
+                <div><img src="headBaker.png" id="printer2" alt="" onclick="printer2()"></div>
+                <div><img src="superClicker1.png" id="clicker1" alt="" onclick="clicker1()"></div>
+                <div><img src="superClicker2.png" id="clicker2" alt="" onclick="clicker2()"></div>
+                <div><img src="superClicker3.png" id="clicker3" alt="" onclick="clicker3()"></div>
+                <div><img src="superClicker4.png" id="clicker4" alt="" onclick="clicker4()"></div>
+                <div><img src="superClicker5.png" id="clicker5" alt="" onclick="clicker5()"></div>
+                <div><img src="randomDoughnut.png" id="random1" alt="" onclick="random1()"></div>
+              </div>
+            </div>
+
+        <p>Doughnut Count: <span id="count">0</span></p>
+        <p>Clicker: <span id="clickerLevel">Level 0</span></p>
+
+
+
+        <div id="navBar">
+            <input id="button" type="button" value="Shop" onclick="goShop()"/>
+            <input id="button" type="button" value="Toggle Nightmode" onclick="switchMode()"/>
+            <input id="button" type="button" value="Cheat Code" onclick="cheatCode()"/>
+        </div>
+
+
+
+        <script src="index.js"></script>
+    </body>
+
+    
+
+</html>

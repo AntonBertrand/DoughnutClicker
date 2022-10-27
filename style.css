@@ -1,0 +1,89 @@
+@font-face{
+    font-family:Cartoon;
+    src:url("Mikhaloo.ttf");
+}
+
+body{
+    font-family: Cartoon;
+    background-color: lightgray;
+    text-align: center;
+    color: black;
+    touch-action: manipulation;
+    padding: 1%;
+}
+
+#instructions{
+    border: double 10px white;
+    padding: 5px;
+    width: 80%;
+    margin: auto;
+    background-color: rgb(114, 113, 113);
+}
+
+#button {
+    background-color: #1f1f1f;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#navBar{
+    border: solid 2px black;
+    background-color: darkgray;
+}
+
+@keyframes shake {
+0% { transform: translate(1px, 1px) rotate(0deg); }
+10% { transform: translate(-1px, -2px) rotate(-1deg); }
+20% { transform: translate(-3px, 0px) rotate(1deg); }
+30% { transform: translate(3px, 2px) rotate(0deg); }
+40% { transform: translate(1px, -1px) rotate(1deg); }
+50% { transform: translate(-1px, 2px) rotate(-1deg); }
+60% { transform: translate(-3px, 1px) rotate(0deg); }
+70% { transform: translate(3px, 1px) rotate(-1deg); }
+80% { transform: translate(-1px, -1px) rotate(1deg); }
+90% { transform: translate(1px, 2px) rotate(0deg); }
+100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.shake{
+animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+transform: translate3d(0, 0, 0);
+backface-visibility: hidden;
+perspective: 1000px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 1rem;
+    padding: 2%;
+  }
+
+  .grid > div {
+    background: black;
+    padding: 1rem;
+    display: grid;
+    place-items: center;
+  }
+  
+  .grid > div::before {
+    content: "";
+    padding-bottom: 100%;
+    display: block;
+    grid-area: 1 / 1 / 2 / 2;
+
+  }
+
+  .grid > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    grid-area: 1 / 1 / 2 / 2;
+  }
